@@ -1,0 +1,16 @@
+@mixin open-sans($weight: regular) {
+  @if ($weight == light) {
+    font-weight: 300;
+    font-family: 'open_sanslight', sans-serif;
+  }
+
+  @if ($weight == regular) {
+    font-weight: 400;
+    font-family: 'open_sansregular', sans-serif;
+  }
+
+  @if ($weight == bold) {
+    font-weight: 700;
+    font-family: 'open_sansbold', sans-serif;
+  }
+}
