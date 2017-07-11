@@ -1,0 +1,17 @@
+/*================================================================
+   avatar
+================================================================*/
+
+.avatar {
+  @include inline-block;
+  width: em(120);
+  height: em(120);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

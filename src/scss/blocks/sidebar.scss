@@ -2,7 +2,7 @@
    sidebar
 ================================================================*/
 
-$transition: .5s;
+$duration: .5s;
 
 .sidebar {
   position: fixed;
@@ -13,7 +13,7 @@ $transition: .5s;
   height: 100%;
   color: #fff;
   background-color: #111;
-  transition: all $transition;
+  transition: all $duration;
 }
 
 .sidebar__toggle {
@@ -24,4 +24,11 @@ $transition: .5s;
 
 .sidebar_open {
   width: $sidebar-width;
+}
+
+.sidebar__content {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  width: 100%;
 }

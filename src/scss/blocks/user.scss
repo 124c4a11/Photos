@@ -1,0 +1,29 @@
+/*================================================================
+   user
+================================================================*/
+
+.user {
+  text-align: center;
+}
+
+.user__avatar {
+  margin-bottom: em(20);
+}
+
+.user__name {
+  margin-top: 0;
+  margin-bottom: em(10);
+  font-size: em(16);
+  @include open-sans();
+}
+
+.user__info {
+  font-size: 12px;
+  @include open-sans(light);
+
+  p {
+    margin-top: em(5);
+    margin-bottom: 0;
+    opacity: .4;
+  }
+}
