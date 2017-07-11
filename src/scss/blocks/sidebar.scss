@@ -23,13 +23,34 @@ $duration: .5s;
   right: 0;
 }
 
-.sidebar_open {
-  width: $sidebar-width;
-}
-
 .sidebar__content {
   position: absolute;
   top: 70px;
   left: 0px;
   width: 100%;
+}
+
+.sidebar__widget {
+  margin-top: 40px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.sidebar__menu {
+  transform: translateY(-110px);
+  transition: transform $duration;
+}
+
+/*================================================================
+   sidebar_open
+================================================================*/
+
+.sidebar_open {
+  width: $sidebar-width;
+
+  .sidebar__menu {
+    transform: translateY(0);
+  }
 }

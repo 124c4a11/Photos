@@ -3,9 +3,31 @@ aside#sidebar.sidebar.sidebar_open
     span.hamburger__item
 
   .sidebar__content
-    .sidebar__user.user
+    .sidebar__user.sidebar__widget.user
       .user__avatar.avatar
         img.avatar__img(src="assets/img/jane.jpg" alt="Jane Doe")
       h1.user__name Jane Doe
       .user__info
         p Фотограф, дизайнер, иллюстратор
+
+    nav.sidebar__menu.sidebar__widget.main-menu
+      ul.main-menu__list
+        -
+          var items = [
+            {
+              title: 'Портфолио',
+              icon: 'u'
+            },{
+              title: 'Обо мне',
+              icon: '{'
+            },{
+              title: 'Контакты',
+              icon: 'R'
+            }
+          ];
+
+        each item in items
+          li.main-menu__item
+            a.main-menu__link(href="#" title=`${item.title}`)
+              span.main-menu__link-icon= item.icon
+              span.main-menu__link-text= item.title

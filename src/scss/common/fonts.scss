@@ -4,24 +4,36 @@
 
 @font-face {
   font-family: 'open_sansbold';
-  src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
-        url('../fonts/opensans-bold-webfont.woff') format('woff');
+  src: url('../fonts/OpenSans/opensans-bold-webfont.woff2') format('woff2'),
+        url('../fonts/OpenSans/opensans-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'open_sanslight';
-  src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
-        url('../fonts/opensans-light-webfont.woff') format('woff');
+  src: url('../fonts/OpenSans/opensans-light-webfont.woff2') format('woff2'),
+        url('../fonts/OpenSans/opensans-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'open_sansregular';
-  src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
-        url('../fonts/opensans-regular-webfont.woff') format('woff');
+  src: url('../fonts/OpenSans/opensans-regular-webfont.woff2') format('woff2'),
+        url('../fonts/OpenSans/opensans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*================================================================
+   Linea icons
+================================================================*/
+
+@font-face {
+  font-family: 'linea-basic-10';
+  src: url('../fonts/LineaIcons/linea-basic-10.eot');
+  src: url('../fonts/LineaIcons/linea-basic-10.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
