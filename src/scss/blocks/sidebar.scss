@@ -12,8 +12,9 @@ $duration: .5s;
   width: 50px;
   height: 100%;
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #111;
+  outline: none;
   transition: all $duration;
 }
 
@@ -25,22 +26,14 @@ $duration: .5s;
 
 .sidebar__content {
   position: absolute;
-  top: 70px;
-  left: 0px;
+  top: 50px;
   width: 100%;
-}
-
-.sidebar__widget {
-  margin-top: 40px;
-
-  &:first-child {
-    margin-top: 0;
-  }
+  padding: 20px 0;
 }
 
 .sidebar__menu {
-  transform: translateY(-110px);
-  transition: transform $duration;
+  margin-top: -110px;
+  transition: margin-top $duration;
 }
 
 /*================================================================
@@ -51,6 +44,6 @@ $duration: .5s;
   width: $sidebar-width;
 
   .sidebar__menu {
-    transform: translateY(0);
+    margin-top: 40px;
   }
 }

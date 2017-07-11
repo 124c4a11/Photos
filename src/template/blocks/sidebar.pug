@@ -1,16 +1,16 @@
-aside#sidebar.sidebar.sidebar_open
+aside#sidebar.sidebar
   button(type="button" title="меню").sidebar__toggle.hamburger
     span.hamburger__item
 
   .sidebar__content
-    .sidebar__user.sidebar__widget.user.user_nowrap
+    .sidebar__user.user.user_nowrap.user_hidden
       .user__avatar.avatar
         img.avatar__img(src="assets/img/jane.jpg" alt="Jane Doe")
       h1.user__name Jane Doe
       .user__info
         p Фотограф, дизайнер, иллюстратор
 
-    nav.sidebar__menu.sidebar__widget.main-menu
+    nav.sidebar__menu.main-menu.main-menu_compact
       ul.main-menu__list
         -
           var items = [
