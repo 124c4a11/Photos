@@ -22,7 +22,7 @@ $border-color: #212121;
 .main-menu__link {
   display: block;
   padding: em(10) em(10) em(10) em(58);
-  font-size: em(14);
+  font-size: rem(14);
   @include open-sans(light);
   color: inherit;
   text-decoration: none;
@@ -55,7 +55,7 @@ $border-color: #212121;
 .main-menu__link-icon {
   @include linea-icons;
   margin-right: em(14);
-  font-size: em(25);
+  font-size: rem(25);
 }
 
 /*================================================================
@@ -64,7 +64,7 @@ $border-color: #212121;
 
 .main-menu_compact {
   .main-menu__link {
-    padding-left: em(15);
+    padding-left: em(14);
   }
 
   .main-menu__link-text {
