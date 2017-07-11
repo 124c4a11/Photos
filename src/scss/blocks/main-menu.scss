@@ -21,7 +21,7 @@ $border-color: #212121;
 
 .main-menu__link {
   display: block;
-  padding: em(10) em(10) em(10) em(58);
+  padding: em(13) em(10) em(13) em(58);
   font-size: rem(14);
   @include open-sans(light);
   color: inherit;
@@ -56,6 +56,7 @@ $border-color: #212121;
   @include linea-icons;
   margin-right: em(14);
   font-size: rem(25);
+  line-height: 1;
 }
 
 /*================================================================
