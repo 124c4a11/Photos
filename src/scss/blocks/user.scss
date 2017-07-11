@@ -2,8 +2,14 @@
    user
 ================================================================*/
 
+$duration: .25s;
+$timing-function: linear;
+
 .user {
   text-align: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity $duration $timing-function $duration, visibility 0s 0s;
 }
 
 .user__avatar {
@@ -26,4 +32,14 @@
     margin-bottom: 0;
     opacity: .4;
   }
+}
+
+/*================================================================
+   user_hidden
+================================================================*/
+
+.user_hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $duration $timing-function 0s, visibility 0s $duration;
 }
