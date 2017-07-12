@@ -2,6 +2,9 @@
    gallery
 ================================================================*/
 
+$duration: .25s;
+$duration-scale-img: 2.5s;
+
 .gallery {
   @include list-unstyled;
 }
@@ -11,10 +14,18 @@
   height: auto;
   margin-bottom: 5px;
   overflow: hidden;
+
+  &:hover {
+    .gallery__img {
+      transform: scale(1.3);
+    }
+  }
 }
 
 .gallery__img {
+  transform: scale(1);
   display: block;
   width: 100%;
   height: auto;
+  transition: transform $duration-scale-img;
 }

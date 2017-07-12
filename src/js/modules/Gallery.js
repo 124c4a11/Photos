@@ -10,6 +10,7 @@ export default class Gallery {
     this.linkSelector = options.linkSelector;
     this.imgSelector = options.imgSelector;
 
+    this.$item = $(this.itemSelector);
     this.$img = $(this.imgSelector);
   }
 
@@ -37,5 +38,10 @@ export default class Gallery {
     wall.fitWidth();
 
     this.$img.on('load', () => wall.fitWidth());
+
+    this.$item.hover(function() {
+      _this.$item.css('opacity', '.8');
+      $(this).css('opacity', '1');
+    }, () => _this.$item.css('opacity', '1'));
   }
 }
