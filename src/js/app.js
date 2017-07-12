@@ -14,7 +14,7 @@ $(document).ready(function() {
     gallerySelector: '#gallery',
     itemSelector: '.gallery__item',
     linkSelector: '.gallery__link',
-    imgSelector: 'gallery__img'
+    imgSelector: '.gallery__img'
   });
 
   gallery.init();

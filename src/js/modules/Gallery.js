@@ -1,6 +1,7 @@
 'use strict';
 
 const Freewall = require('exports?Freewall!../vendor/freewall');
+const lazyload = require('exports?$.fn.lazyload!../vendor/jquery.lazyload');
 
 export default class Gallery {
   constructor(options) {
@@ -8,12 +9,19 @@ export default class Gallery {
     this.itemSelector = options.itemSelector;
     this.linkSelector = options.linkSelector;
     this.imgSelector = options.imgSelector;
+
+    this.$img = $(this.imgSelector);
   }
 
   init() {
     let
       _this = this,
       wall = new Freewall(_this.gallerySelector);
+
+    this.$img.lazyload({
+      effect: 'fadeIn',
+      treshold: 1000
+    });
 
     wall.reset({
       selector: _this.itemSelector,
@@ -27,5 +35,7 @@ export default class Gallery {
       }
     });
     wall.fitWidth();
+
+    this.$img.on('load', () => wall.fitWidth());
   }
 }
