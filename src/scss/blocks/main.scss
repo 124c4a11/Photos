@@ -2,8 +2,21 @@
    main
 ================================================================*/
 
+$duration: .5s;
+
 .main {
   position: relative;
-  padding: 5px;
+  transform: translateX(0);
   margin-left: $sidebar-close-width;
+  padding: 5px;
+  transition: transform $duration 0s;
+}
+
+/*================================================================
+   main_move-left
+================================================================*/
+
+.main_move-left {
+  transform: translateX($sidebar-open-width - $sidebar-close-width);
+  transition: transform $duration $duration;
 }

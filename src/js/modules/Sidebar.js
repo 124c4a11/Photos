@@ -6,6 +6,8 @@ export default class Sidebar {
     this.$toggle = this.$sidebar.find(toggle);
     this.$userInfo = this.$sidebar.find('.sidebar__user');
     this.$menu = this.$sidebar.find('.sidebar__menu');
+    this.$main = $('.main');
+    this.$page = $('.page');
   }
 
   open() {
@@ -19,6 +21,14 @@ export default class Sidebar {
     if (this.$menu.length) {
       this.$menu.removeClass('main-menu_compact');
     }
+
+    if (this.$main.length) {
+      this.$main.addClass('main_move-left');
+    }
+
+    if (this.$page.length) {
+      this.$page.addClass('page_overflow-hidden');
+    }
   }
 
   close() {
@@ -31,6 +41,14 @@ export default class Sidebar {
 
     if (this.$menu.length) {
       this.$menu.addClass('main-menu_compact');
+    }
+
+    if (this.$main.length) {
+      this.$main.removeClass('main_move-left');
+    }
+
+    if (this.$page.length) {
+      this.$page.removeClass('page_overflow-hidden');
     }
   }
 

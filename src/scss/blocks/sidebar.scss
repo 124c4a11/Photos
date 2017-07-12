@@ -13,6 +13,9 @@ $duration: .5s;
   height: 100%;
   color: #fff;
   overflow-x: hidden;
+  overflow-y: auto;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
   background-color: #111;
   outline: none;
   transition: all $duration;

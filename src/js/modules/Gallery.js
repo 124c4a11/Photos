@@ -15,8 +15,6 @@ export default class Gallery {
       _this = this,
       wall = new Freewall(_this.gallerySelector);
 
-    console.log(wall);
-
     wall.reset({
       selector: _this.itemSelector,
       animate: true,
