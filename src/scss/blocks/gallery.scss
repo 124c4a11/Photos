@@ -1,0 +1,20 @@
+/*================================================================
+   gallery
+================================================================*/
+
+.gallery {
+  @include list-unstyled;
+}
+
+.gallery__item {
+  width: 320px;
+  height: auto;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.gallery__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

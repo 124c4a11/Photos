@@ -9,7 +9,7 @@ $duration: .5s;
   top: 0;
   left: 0;
   z-index: 3;
-  width: 50px;
+  width: $sidebar-close-width;
   height: 100%;
   color: #fff;
   overflow-x: hidden;
@@ -41,7 +41,7 @@ $duration: .5s;
 ================================================================*/
 
 .sidebar_open {
-  width: $sidebar-width;
+  width: $sidebar-open-width;
 
   .sidebar__menu {
     margin-top: 40px;
