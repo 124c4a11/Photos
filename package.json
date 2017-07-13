@@ -42,6 +42,7 @@
     "animate.css": "^3.5.2",
     "jquery": "^3.1.1",
     "jquery-lazyload": "^1.9.7",
+    "mixitup": "^3.2.1",
     "normalize.css": "^4.1.1",
     "svg4everybody": "^2.1.4"
   }

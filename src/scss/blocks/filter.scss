@@ -1,0 +1,28 @@
+/*================================================================
+   filter
+================================================================*/
+
+$bg-color: #181818;
+
+.filter {
+  color: $text-color-light;
+}
+
+.filter__btn {
+  margin-bottom: em(15);
+  margin-left: em(3);
+}
+
+/*================================================================
+   filter_fixed-bottom-bar
+================================================================*/
+
+.filter_fixed-bottom-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: em(15) 5px 0 ($sidebar-close-width + 5px);
+  text-align: right;
+  background-color: $bg-color;
+}

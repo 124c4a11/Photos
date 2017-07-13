@@ -3,6 +3,7 @@
 ================================================================*/
 
 $duration: .5s;
+$bg-color: #111;
 
 .sidebar {
   position: fixed;
@@ -16,7 +17,7 @@ $duration: .5s;
   overflow-y: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
-  background-color: #111;
+  background-color: $bg-color;
   outline: none;
   transition: all $duration;
 }

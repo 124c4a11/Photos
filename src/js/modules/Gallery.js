@@ -21,7 +21,7 @@ export default class Gallery {
 
     this.$img.lazyload({
       effect: 'fadeIn',
-      treshold: 1000
+      threshold: 1000
     });
 
     wall.reset({
