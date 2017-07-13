@@ -1,0 +1,35 @@
+/*================================================================
+   btn
+================================================================*/
+
+$text-color: rgba($text-color-light, .5);
+
+$active-color: $theme-color;
+$active-text-color: rgba($text-color-light, 1);
+
+$duration: .25s;
+
+.btn {
+  padding: em(5) em(15);
+  border: 1px solid $text-color;
+  font-size: em(14);
+  color: $text-color;
+  letter-spacing: em(1);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all $duration;
+
+  &:hover,
+  &:focus {
+    border-color: lighten($active-color, 3%);
+    color: $active-text-color;
+    background-color: lighten($active-color, 3%);
+  }
+}
+
+.btn_active {
+  border-color: $active-color;
+  color: $active-text-color;
+  background-color: $active-color;
+}
