@@ -16,13 +16,17 @@ $duration-scale-img: 2.5s;
   overflow: hidden;
 
   &:hover {
-    .gallery__img {
+    .gallery__item-img {
       transform: scale(1.3);
     }
   }
 }
 
-.gallery__img {
+.gallery__item-link {
+  display: block;
+}
+
+.gallery__item-img {
   transform: scale(1);
   display: block;
   width: 100%;

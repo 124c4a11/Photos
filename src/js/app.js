@@ -13,8 +13,8 @@ $(document).ready(function() {
   const gallery = new Gallery({
     gallerySelector: '#gallery',
     itemSelector: '.gallery__item',
-    linkSelector: '.gallery__link',
-    imgSelector: '.gallery__img'
+    linkSelector: '.gallery__item-link',
+    imgSelector: '.gallery__item-img'
   });
 
   gallery.init();
