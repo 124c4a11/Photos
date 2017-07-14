@@ -1,5 +1,3 @@
-'use strict';
-
 const Freewall = require('exports?Freewall!../vendor/freewall');
 const lazyload = require('exports?$.fn.lazyload!../vendor/jquery.lazyload');
 
@@ -10,6 +8,7 @@ export default class Gallery {
     this.linkSelector = options.linkSelector;
     this.imgSelector = options.imgSelector;
 
+    this.$gallery = $(this.gallerySelector);
     this.$item = $(this.itemSelector);
     this.$img = $(this.imgSelector);
   }
@@ -36,6 +35,17 @@ export default class Gallery {
       }
     });
     wall.fitWidth();
+
+    $('.filter__btn').on('click', function() {
+      let
+        $this = $(this),
+        category = $this.data('filter');
+
+      $('.filter__btn').removeClass('btn_active');
+      $this.addClass('btn_active');
+
+      wall.filter(category);
+    });
 
     this.$img.on('load', () => wall.fitWidth());
 

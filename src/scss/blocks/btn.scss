@@ -22,9 +22,9 @@ $duration: .25s;
 
   &:hover,
   &:focus {
-    border-color: lighten($active-color, 3%);
+    border-color: lighten($active-color, 5%);
     color: $active-text-color;
-    background-color: lighten($active-color, 3%);
+    background-color: lighten($active-color, 5%);
   }
 }
 

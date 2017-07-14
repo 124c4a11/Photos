@@ -2,68 +2,88 @@ ul#gallery.gallery
   -
     var items = [
       {
-        oritinal: 'assets/img/gallery/1.jpg'
+        oritinal: 'assets/img/gallery/1.jpg',
+        category: 'nature'
       },
       {
-        oritinal: 'assets/img/gallery/2.jpg'
+        oritinal: 'assets/img/gallery/2.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/3.jpg'
+        oritinal: 'assets/img/gallery/3.jpg',
+        category: 'nature'
       },
       {
-        oritinal: 'assets/img/gallery/4.jpg'
+        oritinal: 'assets/img/gallery/4.jpg',
+        category: 'food'
       },
       {
-        oritinal: 'assets/img/gallery/5.jpg'
+        oritinal: 'assets/img/gallery/5.jpg',
+        category: 'nature'
       },
       {
-        oritinal: 'assets/img/gallery/6.jpg'
+        oritinal: 'assets/img/gallery/6.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/7.jpg'
+        oritinal: 'assets/img/gallery/7.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/8.jpg'
+        oritinal: 'assets/img/gallery/8.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/9.jpg'
+        oritinal: 'assets/img/gallery/9.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/10.jpg'
+        oritinal: 'assets/img/gallery/10.jpg',
+        category: 'food'
       },
       {
-        oritinal: 'assets/img/gallery/1.jpg'
+        oritinal: 'assets/img/gallery/1.jpg',
+        category: 'nature'
       },
       {
-        oritinal: 'assets/img/gallery/2.jpg'
+        oritinal: 'assets/img/gallery/2.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/3.jpg'
+        oritinal: 'assets/img/gallery/3.jpg',
+        category: 'nature'
       },
       {
-        oritinal: 'assets/img/gallery/4.jpg'
+        oritinal: 'assets/img/gallery/4.jpg',
+        category: 'food'
       },
       {
-        oritinal: 'assets/img/gallery/5.jpg'
+        oritinal: 'assets/img/gallery/5.jpg',
+        category: 'nature'
       },
       {
-        oritinal: 'assets/img/gallery/6.jpg'
+        oritinal: 'assets/img/gallery/6.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/7.jpg'
+        oritinal: 'assets/img/gallery/7.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/8.jpg'
+        oritinal: 'assets/img/gallery/8.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/9.jpg'
+        oritinal: 'assets/img/gallery/9.jpg',
+        category: 'cities'
       },
       {
-        oritinal: 'assets/img/gallery/10.jpg'
+        oritinal: 'assets/img/gallery/10.jpg',
+        category: 'food'
       }
     ];
 
   each item in items
-    li.gallery__item
+    li.gallery__item(class= item.category)
       a.gallery__item-link(href= item.oritinal)
         img.gallery__item-img(src="assets/img/dummy.png" data-original= item.oritinal, alt="")

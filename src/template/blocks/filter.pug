@@ -2,6 +2,10 @@
   -
     var btns = [
       {
+        title: 'Все',
+        category: ''
+      },
+      {
         title: 'Природа',
         category: 'nature'
       },{
@@ -14,5 +18,9 @@
     ];
 
   each btn in btns
-    button.btn.filter__btn(type="button" data-filter= btn.category)
-      span.btn__text= btn.title
+    if btn.category
+      button.btn.filter__btn(type="button" data-filter= `.${btn.category}`)
+        span.btn__text= btn.title
+    else
+      button.btn.filter__btn.btn_active(type="button")
+          span.btn__text= btn.title

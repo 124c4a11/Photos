@@ -1,5 +1,3 @@
-'use strict';
-
 import Sidebar from './modules/Sidebar';
 import Gallery from './modules/Gallery';
 

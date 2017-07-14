@@ -1,5 +1,3 @@
-'use strict';
-
 export default class Sidebar {
   constructor({container, toggle}) {
     this.$sidebar = $(container);
