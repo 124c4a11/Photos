@@ -1,5 +1,6 @@
 const Freewall = require('exports?Freewall!../vendor/freewall');
 const lazyload = require('exports?$.fn.lazyload!../vendor/jquery.lazyload');
+const magnificPopup = require('exports?$.fn.magnificPopup!../../../node_modules/magnific-popup/dist/jquery.magnific-popup.js');
 
 export default class Gallery {
   constructor(options) {
@@ -53,5 +54,14 @@ export default class Gallery {
       _this.$item.css('opacity', '.8');
       $(this).css('opacity', '1');
     }, () => _this.$item.css('opacity', '1'));
+
+    $(_this.linkSelector).magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true
+      },
+      removalDelay: 300,
+      mainClass: 'mfp-fade'
+    });
   }
 }
