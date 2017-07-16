@@ -16,18 +16,21 @@ aside#sidebar.sidebar
           var items = [
             {
               title: 'Портфолио',
-              icon: 'u'
+              icon: 'u',
+              href: 'index.html'
             },{
               title: 'Обо мне',
-              icon: '{'
+              icon: '{',
+              href: 'about.html'
             },{
               title: 'Контакты',
-              icon: 'R'
+              icon: 'R',
+              href: 'contacts.html'
             }
           ];
 
         each item in items
           li.main-menu__item
-            a.main-menu__link(href="#" title=`${item.title}`)
+            a.main-menu__link(href= item.href title=`${item.title}`)
               span.main-menu__link-icon= item.icon
               span.main-menu__link-text= item.title
