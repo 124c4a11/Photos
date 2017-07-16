@@ -56,7 +56,7 @@ export default class Gallery {
     }, () => _this.$item.css('opacity', '1'));
 
     $(_this.gallerySelector).magnificPopup({
-      delegate: `${_this.linkSelector}:visible`,
+      delegate: `${_this.itemSelector}:not([style~="width: 0px;"]) ${_this.linkSelector}`,
       type: 'image',
       gallery: {
         enabled: true
