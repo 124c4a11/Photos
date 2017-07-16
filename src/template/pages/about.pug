@@ -4,7 +4,7 @@ block title
   | Photos
 
 block body
-  body.page
+  body.page.page_light
 
     <!--[if lt IE 9]>
       p.browserupgrade
@@ -14,8 +14,6 @@ block body
     block content
       include ../blocks/sidebar
       main.main
-        include ../blocks/gallery
-      include ../blocks/filter
 
     block script
       script(src="assets/js/app.js")
