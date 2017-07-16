@@ -2,9 +2,16 @@
    page
 ================================================================*/
 
+$bg-color-dark: #181818;
+$bg-color-light: #fafafa;
+
 .page {
   overflow-x: hidden;
-  background-color: #181818;
+  background-color: $bg-color-dark;
+}
+
+.page_light {
+  background-color: $bg-color-light;
 }
 
 /*================================================================
