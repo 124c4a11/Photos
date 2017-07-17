@@ -1,8 +1,8 @@
 /*================================================================
-   post
+   content
 ================================================================*/
 
-.post {
+.content {
   padding: 70px 10% 50px;
 
   @media only screen and (max-width: 480px) {
@@ -10,11 +10,11 @@
   }
 }
 
-.post__header {
+.content__header {
   text-align: center;
 }
 
-.post__header-img-wrapper {
+.content__header-img-wrapper {
   @include inline-block;
   width: em(220);
   height: em(220);
@@ -29,20 +29,20 @@
   }
 }
 
-.post__header-img {
+.content__header-img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.post__title {
+.content__title {
   margin-top: 0;
   margin-bottom: em(5);
   font-size: em(36);
   @include open-sans(regular);
 }
 
-.post__subtitle {
+.content__subtitle {
   margin-top: 0;
   margin-bottom: 0;
   font-size: em(14);
@@ -50,7 +50,7 @@
   letter-spacing: em(1);
 }
 
-.post__content {
+.content__body {
   margin-top: em(55);
   @include open-sans(llight);
 
