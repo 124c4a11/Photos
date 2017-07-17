@@ -1,0 +1,21 @@
+/*================================================================
+   field
+================================================================*/
+
+$bg-color: rgba(255, 255, 255, .1);
+$border-color: rgba(255, 255, 255, .15);
+$outline-color: $theme-color;
+
+.field {
+  width: 100%;
+  padding: em(15);
+  border: 1px solid $border-color;
+  font-size: em(15);
+  color: $text-color-light;
+  background-color: $bg-color;
+  resize: none;
+
+  &:focus {
+    outline: 1px solid $outline-color;
+  }
+}

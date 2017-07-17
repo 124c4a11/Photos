@@ -1,0 +1,51 @@
+/*================================================================
+   contacts-list
+================================================================*/
+
+.contacts-list {
+  @include list-unstyled;
+}
+
+.contacts-list__item {
+  & + & {
+    margin-top: rem(40);
+  }
+}
+
+.contacts-list__item-title {
+  margin-top: 0;
+  margin-bottom: rem(8);
+  font-size: rem(20);
+  @include open-sans(light);
+}
+
+.contacts-list__item-icon {
+  @include inline-block(middle);
+  margin-right: rem(15);
+  font-size: rem(28);
+  line-height: 1;
+}
+
+.contacts-list__item-text {
+  @include inline-block(middle);
+}
+
+.contacts-list__item-description {
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: em(5);
+  }
+}
+
+.contacts-list__link {
+  color: $text-color-base;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $theme-color;
+  }
+}

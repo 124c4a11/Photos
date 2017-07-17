@@ -28,8 +28,19 @@ $duration: .25s;
   }
 }
 
+.btn_primary {
+  background-color: $theme-color;
+  border-color: $theme-color;
+}
+
 .btn_active {
   border-color: $active-color;
   color: $active-text-color;
   background-color: $active-color;
+}
+
+.btn_md {
+  padding: em(10) em(20);
+  font-size: 1rem;
+  color: $text-color-light;
 }

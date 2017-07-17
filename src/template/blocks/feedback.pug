@@ -1,0 +1,14 @@
+.feedback
+  .feedback__title Оставить заявку
+  form.feedback__form
+    .feedback__group
+      label.feedback__label Ваше имя
+        input.feedback__field.field(type="text" name="name" required)
+    .feedback__group
+      label.feedback__label Ваш e-mail
+        input.feedback__field.field(type="text" name="e-mail" required)
+    .feedback__group
+      label.feedback__label Ваше сообщение
+        textarea.feedback__message.feedback__field.field(name="message")
+    .feedback__controls
+      button.btn.btn_primary.btn_md(type="submit") Отправить заявку

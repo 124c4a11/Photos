@@ -1,0 +1,38 @@
+ul.contacts-list
+  -
+    var items = [
+      {
+        iconClass: 'icon-basic-webpage-img-txt',
+        title: 'Мой сайт:',
+        description: 'my-site.com',
+        href: 'mailto:my-site.com'
+      },
+      {
+        iconClass: 'icon-basic-geolocalize-05',
+        title: 'Адрес:',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+      },
+      {
+        iconClass: 'icon-basic-smartphone',
+        title: 'Телефон:',
+        description: '+7 (999) 999-99-99',
+        href: 'tel:+79999999999'
+      }
+    ];
+
+  each item in items
+    if item.href
+      li.contacts-list__item
+        .contacts-list__item-title
+          span.contacts-list__item-icon(class= item.iconClass)
+          span.contacts-list__item-text= item.title
+        .contacts-list__item-description
+          p
+            a.contacts-list__link(href= item.href) item.description
+    else
+      li.contacts-list__item
+        .contacts-list__item-title
+          span.contacts-list__item-icon(class= item.iconClass)
+          span.contacts-list__item-text= item.title
+        .contacts-list__item-description
+          p= item.description

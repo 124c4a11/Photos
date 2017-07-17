@@ -1,0 +1,41 @@
+/*================================================================
+   feedback
+================================================================*/
+
+$bg-color: #181818;
+$label-color: rgba($text-color-light, .3);
+
+.feedback {
+  padding: rem(30);
+  background-color: $bg-color;
+}
+
+.feedback__title {
+  margin-top: 0;
+  margin-bottom: em(20);
+  font-size: em(22);
+  @include open-sans(light);
+  color: $text-color-light;
+  text-align: center;
+}
+
+.feedback__group {
+  margin-bottom: rem(20);
+}
+
+.feedback__label {
+  font-size: em(13);
+  color: $label-color;
+}
+
+.feedback__field {
+  margin-top: em(5);
+}
+
+.feedback__message {
+  height: em(120);
+}
+
+.feedback__controls {
+  text-align: center;
+}

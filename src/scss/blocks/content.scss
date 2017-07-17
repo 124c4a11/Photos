@@ -10,6 +10,22 @@
   }
 }
 
+.content__col {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+
+  @media only screen and (max-width: 992px) {
+    float: none;
+    padding: 0;
+    width: 100%;
+
+    & + & {
+      margin-top: 60px;
+    }
+  }
+}
+
 .content__header {
   text-align: center;
 }
@@ -54,13 +70,11 @@
   margin-top: em(55);
   @include open-sans(llight);
 
-  :first-child {
+  p:first-child {
     margin-top: 0;
   }
 
-  :last-child {
-    margin-bottom: 0;
-  }
+  @include clearfix;
 
   @media only screen and (max-width: 480px) {
     margin-top: em(40);
