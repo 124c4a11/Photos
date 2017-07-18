@@ -3,19 +3,12 @@ extend ../_template-en
 block title
   | Photos
 
-block body
-  body.page
 
-    <!--[if lt IE 9]>
-      p.browserupgrade
-        | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    <![endif]-->
+block content
+  include ../blocks/sidebar
+  main.main
+    include ../blocks/gallery
+  include ../blocks/filter
 
-    block content
-      include ../blocks/sidebar
-      main.main
-        include ../blocks/gallery
-      include ../blocks/filter
-
-    block script
-      script(src="assets/js/app.js")
+block script
+  script(src="assets/js/app.js")

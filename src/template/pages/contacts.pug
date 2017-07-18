@@ -1,28 +1,21 @@
-extend ../_template-en
+extend ../_template-light
 
 block title
   | Photos
 
-block body
-  body.page.page_light
 
-    <!--[if lt IE 9]>
-      p.browserupgrade
-        | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    <![endif]-->
+block content
+  include ../blocks/sidebar
+  main.main
+    .content
+      header.content__header
+        h2.content__title Обратная связь
+        p.content__subtitle Свяжитесь со мной одним из следующих способов
+      .content__body
+        .content__col
+          include ../blocks/contacts-list
+        .content__col
+          include ../blocks/feedback
 
-    block content
-      include ../blocks/sidebar
-      main.main
-        .content
-          header.content__header
-            h2.content__title Обратная связь
-            p.content__subtitle Свяжитесь со мной одним из следующих способов
-          .content__body
-            .content__col
-              include ../blocks/contacts-list
-            .content__col
-              include ../blocks/feedback
-
-    block script
-      script(src="assets/js/about.js")
+block script
+  script(src="assets/js/contacts.js")

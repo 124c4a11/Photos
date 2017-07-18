@@ -1,20 +1,13 @@
-extend ../_template-en
+extend ../_template-light
 
 block title
   | Photos
 
-block body
-  body.page.page_light
 
-    <!--[if lt IE 9]>
-      p.browserupgrade
-        | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    <![endif]-->
+block content
+  include ../blocks/sidebar
+  main.main
+    include ../blocks/post-about
 
-    block content
-      include ../blocks/sidebar
-      main.main
-        include ../blocks/post-about
-
-    block script
-      script(src="assets/js/about.js")
+block script
+  script(src="assets/js/about.js")
