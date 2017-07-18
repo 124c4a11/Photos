@@ -28,7 +28,7 @@ ul.contacts-list
           span.contacts-list__item-text= item.title
         .contacts-list__item-description
           p
-            a.contacts-list__link(href= item.href) item.description
+            a.contacts-list__link(href= item.href)= item.description
     else
       li.contacts-list__item
         .contacts-list__item-title
