@@ -8,9 +8,9 @@ $outline-color: $theme-color;
 
 .field {
   width: 100%;
-  padding: em(15);
+  padding: rem(10);
   border: 1px solid $border-color;
-  font-size: em(15);
+  font-size: rem(15);
   color: $text-color-light;
   background-color: $bg-color;
   resize: none;
