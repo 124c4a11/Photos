@@ -2,9 +2,8 @@
    filter
 ================================================================*/
 
-$bg-color: #181818;
-
 .filter {
+  padding-top: rem(13);
   color: $text-color-light;
 }
 
@@ -14,15 +13,9 @@ $bg-color: #181818;
 }
 
 /*================================================================
-   filter_fixed-bottom-bar
+   filter_text-right
 ================================================================*/
 
-.filter_fixed-bottom-bar {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  padding: em(15) 5px 0 ($sidebar-close-width + 5px);
+.filter_text-right {
   text-align: right;
-  background-color: $bg-color;
 }
