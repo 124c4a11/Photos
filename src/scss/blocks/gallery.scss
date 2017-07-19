@@ -7,6 +7,11 @@ $duration-scale-img: 2.5s;
 
 .gallery {
   @include list-unstyled;
+  margin-bottom: 100px;
+
+  @media only screen and (max-width: 992px) {
+    margin-bottom: 42px;
+  }
 }
 
 .gallery__item {

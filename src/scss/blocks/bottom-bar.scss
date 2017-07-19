@@ -84,12 +84,13 @@ $bar-open-duration: .5s;
 }
 
 .bottom-bar__content {
-  max-height: 320px;
+  max-height: 100px;
   overflow-y: auto;
   /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
   -webkit-overflow-scrolling: touch;
 
   @media only screen and (max-width: 992px) {
+    max-height: 320px;
     padding-top: $toggle-height;
   }
 }
