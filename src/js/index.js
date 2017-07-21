@@ -1,6 +1,7 @@
 import sidebar from './modules/sidebar';
 import gallery from './modules/gallery';
 import bottomBar from './modules/bottomBar';
+import preloader from './modules/preloader';
 
 
 $(document).ready(function() {
@@ -16,5 +17,12 @@ $(document).ready(function() {
 
   if ($('.filter__btn').length) {
     $('.filter__btn').on('click', () => bottomBar.close());
+  }
+});
+
+
+$(window).on('load', function() {
+  if ($('.preloader').length) {
+    preloader.init();
   }
 });
