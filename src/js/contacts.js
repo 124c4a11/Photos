@@ -1,12 +1,7 @@
-import Sidebar from './modules/Sidebar';
+import sidebar from './modules/sidebar';
 
 
 $(document).ready(function() {
-  const sidebar = new Sidebar({
-    container: '#sidebar',
-    toggle: '.sidebar__toggle'
-  });
-
   if (sidebar.$toggle.length) {
     sidebar.$toggle.on('click', () => sidebar.clickOnToggle());
   }

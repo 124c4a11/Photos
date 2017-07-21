@@ -1,16 +1,26 @@
-export default class Sidebar {
+import bottomBar from './bottomBar';
+
+class Sidebar {
   constructor({container, toggle}) {
     this.$sidebar = $(container);
     this.$toggle = this.$sidebar.find(toggle);
     this.$userInfo = this.$sidebar.find('.sidebar__user');
     this.$menu = this.$sidebar.find('.sidebar__menu');
+
     this.$main = $('.main');
     this.$page = $('.page');
+
+    this.state = 'close';
   }
 
   open() {
     this.$sidebar.addClass('sidebar_open');
     this.$toggle.addClass('hamburger_close');
+    this.state = 'open';
+
+    if (bottomBar.state === 'open') {
+      bottomBar.close();
+    }
 
     if (this.$userInfo.length) {
       this.$userInfo.removeClass('user_hidden');
@@ -32,6 +42,7 @@ export default class Sidebar {
   close() {
     this.$sidebar.removeClass('sidebar_open');
     this.$toggle.removeClass('hamburger_close');
+    this.state = 'close';
 
     if (this.$userInfo.length) {
       this.$userInfo.addClass('user_hidden');
@@ -58,3 +69,9 @@ export default class Sidebar {
     }
   }
 }
+
+
+export default new Sidebar({
+  container: '.sidebar',
+  toggle: '.sidebar__toggle'
+});

@@ -1,8 +1,11 @@
+import sidebar from './sidebar';
+import bottomBar from './bottomBar';
+
 const Freewall = require('exports?Freewall!../vendor/freewall');
 const lazyload = require('exports?$.fn.lazyload!../vendor/jquery.lazyload');
 const magnificPopup = require('exports?$.fn.magnificPopup!../../../node_modules/magnific-popup/dist/jquery.magnific-popup.js');
 
-export default class Gallery {
+class Gallery {
   constructor(options) {
     this.gallerySelector = options.gallerySelector;
     this.itemSelector = options.itemSelector;
@@ -10,8 +13,8 @@ export default class Gallery {
     this.imgSelector = options.imgSelector;
 
     this.$gallery = $(this.gallerySelector);
-    this.$item = $(this.itemSelector);
-    this.$img = $(this.imgSelector);
+    this.$item = this.$gallery.find(this.itemSelector);
+    this.$img = this.$gallery.find(this.imgSelector);
   }
 
   init() {
@@ -62,7 +65,21 @@ export default class Gallery {
         enabled: true
       },
       removalDelay: 300,
-      mainClass: 'mfp-fade'
+      mainClass: 'mfp-fade',
+      callbacks: {
+        open: function () {
+          if (sidebar.state === 'open') sidebar.close();
+          if (bottomBar.state === 'open') bottomBar.close();
+        }
+      }
     });
   }
 }
+
+
+export default new Gallery({
+  gallerySelector: '.gallery',
+  itemSelector: '.gallery__item',
+  linkSelector: '.gallery__item-link',
+  imgSelector: '.gallery__item-img'
+});
