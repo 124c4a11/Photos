@@ -8,6 +8,8 @@ $hamburger-padding: 0;
 $hamburger-bg: $theme-color;
 $hamburger-close-bg: transparent;
 
+$focus-bg-color: lighten($theme-color, 5%);
+
 $items-width: 60%;
 $items-height: 2px;
 $items-space: 6px;
@@ -28,6 +30,11 @@ $timing-func: linear;
   background: $hamburger-bg;
   outline: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $focus-bg-color;
+  }
 }
 
 .hamburger__item {
