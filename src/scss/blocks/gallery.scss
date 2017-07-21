@@ -29,6 +29,11 @@ $duration-scale-img: 2.5s;
 
 .gallery__item-link {
   display: block;
+  border: 1px solid transparent;
+
+  &:focus {
+    border: 1px solid $theme-color;
+  }
 }
 
 .gallery__item-img {
