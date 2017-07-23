@@ -29,10 +29,13 @@ $duration-scale-img: 2.5s;
 
 .gallery__item-link {
   display: block;
-  border: 1px solid transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid transparent;
 
   &:focus {
-    border: 1px solid $theme-color;
+    border: 2px solid $theme-color;
   }
 }
 
