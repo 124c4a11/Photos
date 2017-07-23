@@ -30,6 +30,7 @@ $timing-func: linear;
   background: $hamburger-bg;
   outline: none;
   cursor: pointer;
+  transition: background-color $duration;
 
   &:hover,
   &:focus {
